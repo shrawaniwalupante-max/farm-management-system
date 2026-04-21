@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %}{% endblock title %} - F.M.S</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: url('/static/images/bg.jpg') center center / cover no-repeat fixed;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 12, 34, 0.82);
+      z-index: 0;
+    }
+    #auth-header {
+      position: relative;
+      z-index: 10;
+      padding: 18px 30px;
+    }
+    #auth-header a {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #fff !important;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+    .auth-wrapper {
+      position: relative;
+      z-index: 10;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+    .auth-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 42px 40px;
+      width: 100%;
+      max-width: 430px;
+      color: #fff;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .auth-card h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .auth-card h1 span { color: #28a745; }
+    .auth-card .subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+    }
+    .auth-card label {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .auth-card .form-control {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 14px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .auth-card .form-control::placeholder { color: rgba(255,255,255,0.4); }
+    .auth-card .form-control:focus {
+      background: rgba(255,255,255,0.15);
+      border-color: #28a745;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(40,167,69,0.25);
+      color: #fff;
+    }
+    .auth-card .btn-auth {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 11px;
+      font-size: 1rem;
+      font-weight: 600;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 6px;
+    }
+    .auth-card .btn-auth:hover { background: #218838; transform: translateY(-1px); }
+    .auth-card .switch-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .auth-card .switch-link a {
+      color: #28a745 !important;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .auth-card .switch-link a:hover { text-decoration: underline; }
+    .auth-card .alert { border-radius: 8px; font-size: 0.88rem; }
+    .form-group { margin-bottom: 16px; }
+    .form-text { color: rgba(255,255,255,0.45) !important; font-size: 0.78rem; }
+    #auth-footer {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 14px;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.82rem;
+    }
+    #auth-footer a { color: #28a745 !important; }
+  </style>
+</head>
+<body>
+  <div id="auth-header">
+    <a href="/login">F.M.S</a>
+  </div>
+
+  <div class="auth-wrapper">
+    <div class="auth-card" data-aos="zoom-in" data-aos-duration="600">
+      {% block content %}{% endblock content %}
+    </div>
+  </div>
+
+  <div id="auth-footer">
+    Developed by <a href="#">Anees</a>
+  </div>
+
+  <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
