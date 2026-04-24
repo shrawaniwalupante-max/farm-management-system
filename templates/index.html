@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block body %}
+
+<div class="container mt-5 text-center">
+    <h1>Welcome to Farm Management System</h1>
+
+```
+<br>
+
+{% if current_user.is_authenticated %}
+    <h3>Welcome {{ current_user.username }}</h3>
+    <p>You are successfully logged in.</p>
+{% endif %}
+
+<br>
+
+<a href="/register" class="btn btn-success">Register Farmer</a>
+<a href="/farmerdetails" class="btn btn-primary">Farmer Details</a>
+<a href="/agroproducts" class="btn btn-warning">Agro Products</a>
+```
+
+</div>
+
+{% endblock body %}

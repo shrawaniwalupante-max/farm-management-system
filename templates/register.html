@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register Farmer
+{% endblock title %}
+
+{% block body %}
+
+<div class="container mt-5">
+
+```
+<h1 class="text-center mb-4">Register Farmer</h1>
+
+<form method="POST" action="/register">
+
+    <div class="mb-3">
+        <label class="form-label">Farmer Name</label>
+        <input type="text" class="form-control" name="farmername" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Aadhar Number</label>
+        <input type="text" class="form-control" name="adharnumber" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Age</label>
+        <input type="number" class="form-control" name="age" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <select class="form-control" name="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="text" class="form-control" name="phonenumber" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Address</label>
+        <textarea class="form-control" name="address"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Farming Type</label>
+        <input type="text" class="form-control" name="farmingtype" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Register Farmer
+    </button>
+
+</form>
+```
+
+</div>
+
+{% endblock body %}

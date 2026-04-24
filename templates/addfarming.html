@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add Farming
+{% endblock title %}
+
+{% block body %}
+
+<div class="container mt-5">
+
+    <h1 class="text-center mb-4">Add Farming Record</h1>
+
+    <form method="POST" action="/addfarming">
+
+        <div class="mb-3">
+            <label class="form-label">Farmer ID</label>
+            <input type="text" class="form-control" name="fid" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Crop Name</label>
+            <input type="text" class="form-control" name="crop" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Season</label>
+            <input type="text" class="form-control" name="season" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Record</button>
+
+    </form>
+
+</div>
+
+{% endblock body %}

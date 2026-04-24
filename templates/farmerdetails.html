@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Farmer Details
+{% endblock title %}
+
+{% block body %}
+
+<div class="container mt-5">
+
+```
+<h1 class="text-center mb-4">Farmer Details</h1>
+
+<table class="table table-bordered table-striped">
+
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Farmer Name</th>
+            <th>Aadhar Number</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Farming Type</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for row in query %}
+
+        <tr>
+            <td>{{ row.fid }}</td>
+            <td>{{ row.farmername }}</td>
+            <td>{{ row.adharnumber }}</td>
+            <td>{{ row.age }}</td>
+            <td>{{ row.gender }}</td>
+            <td>{{ row.phonenumber }}</td>
+            <td>{{ row.address }}</td>
+            <td>{{ row.farming }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+```
+
+</div>
+
+{% endblock body %}

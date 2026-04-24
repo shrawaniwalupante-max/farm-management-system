@@ -179,11 +179,19 @@ def addagroproduct():
     return render_template("addagroproducts.html")
 
 
-@app.route("/triggers")
+@app.route('/records')
 @login_required
-def triggers():
-    query = Trig.query.all()
-    return render_template("triggers.html", query=query)
+def records():
+
+```
+farming_records = Farming.query.all()
+
+return render_template(
+    'triggers.html',
+    farming_records=farming_records
+)
+```
+
 
 
 @app.route("/addfarming", methods=["POST", "GET"])
@@ -199,7 +207,7 @@ def addfarming():
         db.session.add(dep)
         db.session.commit()
         flash("Farming Added", "success")
-    return render_template("farming.html")
+    return render_template('addfarming.html')
 
 
 @app.route("/delete/<string:rid>", methods=["POST", "GET"])
@@ -316,7 +324,7 @@ def register():
         db.session.commit()
         flash("Farmer Registered Successfully", "success")
         return redirect("/farmerdetails")
-    return render_template("farmer.html", farming=farming)
+    return render_template('register.html', farming=farming)
 
 
 @app.route("/test")
