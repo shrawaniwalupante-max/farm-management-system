@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Records
+{% endblock title %}
+
+{% block body %}
+
+<div class="container mt-5">
+
+    <h1 class="text-center mb-5">Database Records</h1>
+
+    <table class="table table-bordered table-hover bg-white">
+
+        <thead class="table-dark">
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Farmer Code</th>
+
+                <th>Farmer Name</th>
+
+                <th>Email</th>
+
+                <th>Phone</th>
+
+                <th>Crop</th>
+
+                <th>Season</th>
+
+                <th>Timestamp</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for r in records %}
+
+            <tr>
+
+                <td>{{ r.id }}</td>
+
+                <td>{{ r.fid }}</td>
+
+                <td>{{ r.farmername }}</td>
+
+                <td>{{ r.email }}</td>
+
+                <td>{{ r.phone }}</td>
+
+                <td>{{ r.crop }}</td>
+
+                <td>{{ r.season }}</td>
+
+                <td>{{ r.timestamp }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock body %}

@@ -2,30 +2,63 @@
 
 {% block title %}
 Records
-{% endblock title %}
+{% endblock %}
 
 {% block body %}
 
 <div class="container mt-5">
 
-    <h1 class="text-center mb-4">Database Records</h1>
+    <h1 class="text-center mb-5 display-3">
+        Database Records
+    </h1>
 
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped bg-white">
 
         <thead class="table-dark">
+
             <tr>
                 <th>ID</th>
-                <th>Message</th>
+                <th>Farmer Code</th>
+                <th>Farmer Name</th>
+                <th>Phone</th>
+                <th>Farming Type</th>
+                <th>Crop Name</th>
+                <th>Season</th>
+                <th>Timestamp</th>
             </tr>
+
         </thead>
 
         <tbody>
 
-            {% for row in query %}
+            {% for record in farming_records %}
 
             <tr>
-                <td>{{ row.id }}</td>
-                <td>{{ row.message }}</td>
+
+                <td>{{ record.id }}</td>
+
+                <td>
+                    {{ farmer_data.get(record.fid, {}).get('code', 'FM000') }}
+                </td>
+
+                <td>
+                    {{ farmer_data.get(record.fid, {}).get('name', 'Unknown Farmer') }}
+                </td>
+
+                <td>
+                    {{ farmer_data.get(record.fid, {}).get('phone', 'N/A') }}
+                </td>
+
+                <td>
+                    {{ farmer_data.get(record.fid, {}).get('farming', 'N/A') }}
+                </td>
+
+                <td>{{ record.crop }}</td>
+
+                <td>{{ record.season }}</td>
+
+                <td>{{ record.timestamp }}</td>
+
             </tr>
 
             {% endfor %}
@@ -36,4 +69,4 @@ Records
 
 </div>
 
-{% endblock body %}
+{% endblock %}

@@ -6,23 +6,182 @@ Home
 
 {% block body %}
 
-<div class="container mt-5 text-center">
-    <h1>Welcome to Farm Management System</h1>
+<style>
 
-```
-<br>
+.hero-section{
 
-{% if current_user.is_authenticated %}
-    <h3>Welcome {{ current_user.username }}</h3>
-    <p>You are successfully logged in.</p>
-{% endif %}
+    height: 85vh;
 
-<br>
+    background-image: url('/static/images/Background.jpg');
 
-<a href="/register" class="btn btn-success">Register Farmer</a>
-<a href="/farmerdetails" class="btn btn-primary">Farmer Details</a>
-<a href="/agroproducts" class="btn btn-warning">Agro Products</a>
-```
+    background-size: cover;
+
+    background-position: center;
+
+    border-radius: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 30px;
+
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.3);
+}
+
+.hero-overlay{
+
+    background: rgba(0,0,0,0.55);
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    text-align: center;
+}
+
+.category-card{
+
+    border: none;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+    cursor: pointer;
+
+    background: white;
+}
+
+.category-card:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+}
+
+.product-image{
+
+    height: 250px;
+
+    width: 100%;
+
+    object-fit: cover;
+}
+
+</style>
+
+<div class="hero-section">
+
+    <div class="hero-overlay">
+
+        <h1 class="display-2 fw-bold">
+            Farm Management System
+        </h1>
+
+        <p class="fs-2 mt-3">
+            Smart Farming | Better Harvest | Better Future
+        </p>
+
+    </div>
+
+</div>
+
+<div class="container mt-5 mb-5">
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <a href="/agroproducts#fruits" style="text-decoration:none;color:black;">
+
+                <div class="card category-card shadow">
+
+                    <img src="/static/images/Fruits and Vegtables.jpg" class="product-image">
+
+                    <div class="card-body text-center">
+
+                        <h3>Fruits & Vegetables</h3>
+
+                        <p>
+                            Fresh organic fruits and vegetables directly from farms.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <a href="/agroproducts#seeds" style="text-decoration:none;color:black;">
+
+                <div class="card category-card shadow">
+
+                    <img src="/static/images/Seeds.jpg" class="product-image">
+
+                    <div class="card-body text-center">
+
+                        <h3>Seed Farming</h3>
+
+                        <p>
+                            Premium quality grains, pulses and farming seeds.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <a href="/agroproducts#others" style="text-decoration:none;color:black;">
+
+                <div class="card category-card shadow">
+
+                    <img src="/static/images/cotton.jpg" class="product-image">
+
+                    <div class="card-body text-center">
+
+                        <h3>Other Products</h3>
+
+                        <p>
+                            Cotton, flowers, jute, rubber and more agricultural products.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
 

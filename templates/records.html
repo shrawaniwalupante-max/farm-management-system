@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Farmer Details
+Records
 {% endblock title %}
 
 {% block body %}
 
 <style>
 
-.details-table{
+.records-table{
 
     background: white;
 
@@ -19,7 +19,7 @@ Farmer Details
     box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
 }
 
-.details-table th{
+.records-table th{
 
     background: #1f232a;
 
@@ -28,12 +28,12 @@ Farmer Details
     padding: 15px;
 }
 
-.details-table td{
+.records-table td{
 
     padding: 15px;
 }
 
-.details-table tr:nth-child(even){
+.records-table tr:nth-child(even){
 
     background-color: #f2f2f2;
 }
@@ -43,10 +43,10 @@ Farmer Details
 <div class="container mt-5 mb-5">
 
     <h1 class="text-center display-3 mb-5">
-        Farmer Details
+        Database Records
     </h1>
 
-    <div class="table-responsive details-table">
+    <div class="table-responsive records-table">
 
         <table class="table table-bordered mb-0">
 
@@ -55,13 +55,13 @@ Farmer Details
                 <tr>
 
                     <th>ID</th>
+                    <th>Farmer Code</th>
                     <th>Farmer Name</th>
-                    <th>Aadhar Number</th>
-                    <th>Age</th>
-                    <th>Gender</th>
                     <th>Phone</th>
-                    <th>Address</th>
                     <th>Farming Type</th>
+                    <th>Crop Name</th>
+                    <th>Season</th>
+                    <th>Timestamp</th>
 
                 </tr>
 
@@ -71,90 +71,90 @@ Farmer Details
 
                 <tr>
                     <td>1</td>
+                    <td>FM001</td>
                     <td>Anita Shinde</td>
-                    <td>458976325577</td>
-                    <td>37</td>
-                    <td>Female</td>
                     <td>8896745236</td>
-                    <td>Beed, Maharashtra</td>
                     <td>Fruit Farming</td>
+                    <td>Apple</td>
+                    <td>Winter</td>
+                    <td>26-04-2026 10:30 AM</td>
                 </tr>
 
                 <tr>
                     <td>2</td>
+                    <td>FM002</td>
                     <td>Rohit Patil</td>
-                    <td>748596321457</td>
-                    <td>41</td>
-                    <td>Male</td>
                     <td>9876543210</td>
-                    <td>Pune, Maharashtra</td>
                     <td>Banana Farming</td>
+                    <td>Banana</td>
+                    <td>Summer</td>
+                    <td>26-04-2026 11:00 AM</td>
                 </tr>
 
                 <tr>
                     <td>3</td>
+                    <td>FM003</td>
                     <td>Kavita More</td>
-                    <td>963258741258</td>
-                    <td>35</td>
-                    <td>Female</td>
                     <td>9765432189</td>
-                    <td>Nashik, Maharashtra</td>
                     <td>Mango Farming</td>
+                    <td>Mango</td>
+                    <td>Summer</td>
+                    <td>26-04-2026 11:30 AM</td>
                 </tr>
 
                 <tr>
                     <td>4</td>
+                    <td>FM004</td>
                     <td>Akash Shinde</td>
-                    <td>852741963852</td>
-                    <td>39</td>
-                    <td>Male</td>
                     <td>9988776655</td>
-                    <td>Satara, Maharashtra</td>
                     <td>Seed Farming</td>
+                    <td>Wheat</td>
+                    <td>Rabi</td>
+                    <td>26-04-2026 12:00 PM</td>
                 </tr>
 
                 <tr>
                     <td>5</td>
+                    <td>FM005</td>
                     <td>Nitin Pawar</td>
-                    <td>741258963456</td>
-                    <td>42</td>
-                    <td>Male</td>
                     <td>9123456780</td>
-                    <td>Kolhapur, Maharashtra</td>
                     <td>Rice Farming</td>
+                    <td>Rice</td>
+                    <td>Kharif</td>
+                    <td>26-04-2026 12:30 PM</td>
                 </tr>
 
                 <tr>
                     <td>6</td>
+                    <td>FM006</td>
                     <td>Ramesh Patil</td>
-                    <td>654123987456</td>
-                    <td>45</td>
-                    <td>Male</td>
                     <td>9345678123</td>
-                    <td>Sangli, Maharashtra</td>
                     <td>Jowar Farming</td>
+                    <td>Jowar</td>
+                    <td>Kharif</td>
+                    <td>26-04-2026 01:00 PM</td>
                 </tr>
 
                 <tr>
                     <td>7</td>
+                    <td>FM007</td>
                     <td>Sneha Kulkarni</td>
-                    <td>741852963741</td>
-                    <td>32</td>
-                    <td>Female</td>
                     <td>9871203456</td>
-                    <td>Nagpur, Maharashtra</td>
                     <td>Vegetable Farming</td>
+                    <td>Tomato</td>
+                    <td>Winter</td>
+                    <td>26-04-2026 01:30 PM</td>
                 </tr>
 
                 <tr>
                     <td>8</td>
+                    <td>FM008</td>
                     <td>Vikram Jadhav</td>
-                    <td>369258147369</td>
-                    <td>44</td>
-                    <td>Male</td>
                     <td>9988123456</td>
-                    <td>Ahmednagar, Maharashtra</td>
                     <td>Other Products</td>
+                    <td>Cotton</td>
+                    <td>Annual</td>
+                    <td>26-04-2026 02:00 PM</td>
                 </tr>
 
             </tbody>
